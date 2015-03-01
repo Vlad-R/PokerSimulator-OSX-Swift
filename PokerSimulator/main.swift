@@ -8,4 +8,5 @@
 
 import Foundation
 
-println("Hello, World!")
+let deck = Deck()
+println("\(deck)")

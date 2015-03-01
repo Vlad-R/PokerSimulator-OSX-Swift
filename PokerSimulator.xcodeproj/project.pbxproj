@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		26548E471AA274EA00309979 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26548E461AA274EA00309979 /* main.swift */; };
+		26548E4F1AA27C3400309979 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26548E4E1AA27C3400309979 /* Deck.swift */; };
+		26548E511AA27C6900309979 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26548E501AA27C6900309979 /* Card.swift */; };
+		26548E531AA27C7600309979 /* Hand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26548E521AA27C7600309979 /* Hand.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,9 @@
 /* Begin PBXFileReference section */
 		26548E431AA274EA00309979 /* PokerSimulator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PokerSimulator; sourceTree = BUILT_PRODUCTS_DIR; };
 		26548E461AA274EA00309979 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		26548E4E1AA27C3400309979 /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		26548E501AA27C6900309979 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		26548E521AA27C7600309979 /* Hand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hand.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,9 @@
 			isa = PBXGroup;
 			children = (
 				26548E461AA274EA00309979 /* main.swift */,
+				26548E501AA27C6900309979 /* Card.swift */,
+				26548E4E1AA27C3400309979 /* Deck.swift */,
+				26548E521AA27C7600309979 /* Hand.swift */,
 			);
 			path = PokerSimulator;
 			sourceTree = "<group>";
@@ -118,6 +127,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26548E531AA27C7600309979 /* Hand.swift in Sources */,
+				26548E4F1AA27C3400309979 /* Deck.swift in Sources */,
+				26548E511AA27C6900309979 /* Card.swift in Sources */,
 				26548E471AA274EA00309979 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -233,6 +245,7 @@
 				26548E4C1AA274EA00309979 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
