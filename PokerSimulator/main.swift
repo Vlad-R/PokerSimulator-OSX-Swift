@@ -10,4 +10,4 @@ import Foundation
 
 var deck = Deck()
 deck.shuffle()
-println(deck)
+println(deck.draw(count: 5))

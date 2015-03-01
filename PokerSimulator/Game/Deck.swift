@@ -21,6 +21,20 @@ class Deck: Printable {
         self.cards.shuffle()
     }
     
+    func draw(#count: UInt) -> [Card] {
+        var cards = [Card]()
+        for i in 0..<count {
+            if let topCard = self.cards.first {
+                cards += [topCard]
+                self.cards.removeAtIndex(0)
+            } else {
+                break
+            }
+        }
+        
+        return cards
+    }
+    
     // MARK: - Printable Protocol
     var description: String {
         return "\(self.cards)"
