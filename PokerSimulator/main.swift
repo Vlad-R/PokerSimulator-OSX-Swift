@@ -8,6 +8,7 @@
 
 import Foundation
 
-var deck = Deck()
-deck.shuffle()
-println(deck.draw(count: 5))
+let dealer = Dealer()
+dealer.dealNumberOfHands(5, withNumberOfCards: 5)
+
+println(dealer)

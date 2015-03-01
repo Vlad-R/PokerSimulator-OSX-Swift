@@ -12,6 +12,7 @@
 		26548E591AA2925700309979 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26548E561AA2925700309979 /* Deck.swift */; };
 		26548E5A1AA2925700309979 /* Hand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26548E571AA2925700309979 /* Hand.swift */; };
 		26548E5D1AA2943200309979 /* Array+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26548E5C1AA2943200309979 /* Array+Additions.swift */; };
+		266E072E1AA3B16800E0E269 /* Dealer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266E072D1AA3B16800E0E269 /* Dealer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +34,7 @@
 		26548E561AA2925700309979 /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 		26548E571AA2925700309979 /* Hand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hand.swift; sourceTree = "<group>"; };
 		26548E5C1AA2943200309979 /* Array+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Additions.swift"; sourceTree = "<group>"; };
+		266E072D1AA3B16800E0E269 /* Dealer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dealer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 		26548E541AA2925700309979 /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				266E072D1AA3B16800E0E269 /* Dealer.swift */,
 				26548E551AA2925700309979 /* Card.swift */,
 				26548E561AA2925700309979 /* Deck.swift */,
 				26548E571AA2925700309979 /* Hand.swift */,
@@ -148,6 +151,7 @@
 			files = (
 				26548E5D1AA2943200309979 /* Array+Additions.swift in Sources */,
 				26548E591AA2925700309979 /* Deck.swift in Sources */,
+				266E072E1AA3B16800E0E269 /* Dealer.swift in Sources */,
 				26548E581AA2925700309979 /* Card.swift in Sources */,
 				26548E5A1AA2925700309979 /* Hand.swift in Sources */,
 				26548E471AA274EA00309979 /* main.swift in Sources */,
