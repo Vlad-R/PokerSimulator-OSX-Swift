@@ -7,7 +7,7 @@
 //
 
 class Deck: Printable {
-    var cards = [Card]()
+    private var cards = [Card]()
     
     init() {
         for suit in Card.Suit.allValues {
@@ -15,6 +15,10 @@ class Deck: Printable {
                 self.cards += [Card(suit: suit, rank: rank)];
             }
         }
+    }
+    
+    func shuffle() {
+        self.cards.shuffle()
     }
     
     // MARK: - Printable Protocol

@@ -8,5 +8,6 @@
 
 import Foundation
 
-let deck = Deck()
-println("\(deck)")
+var deck = Deck()
+deck.shuffle()
+println(deck)
