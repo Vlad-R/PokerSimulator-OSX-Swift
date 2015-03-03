@@ -72,13 +72,11 @@ class Hand: Printable {
 // MARK: - Operators:
 
 // MARK: Equatable Protocol
-
 func ==(lhs: Hand.Rank, rhs: Hand.Rank) -> Bool {
     return lhs.priority == rhs.priority
 }
 
 // MARK: Comparable Protocol
-
 func <(lhs: Hand.Rank, rhs: Hand.Rank) -> Bool {
     return lhs.priority < rhs.priority
 }
