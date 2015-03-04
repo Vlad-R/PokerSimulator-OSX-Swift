@@ -7,8 +7,9 @@
 //
 
 class FullHouseExaminer: HandExaminer {
-    override func isHandValid(hand: Hand) -> Bool {
-        return true
+    override func isRankValid(hand: Hand) -> Bool {
+        return (GameRules.numberOfFormationsInHand(hand, containingNumberOfCards: 3) == 1) &&
+            (GameRules.numberOfFormationsInHand(hand, containingNumberOfCards: 2) == 1)
     }
     
     override var examinedRank: Hand.Rank {

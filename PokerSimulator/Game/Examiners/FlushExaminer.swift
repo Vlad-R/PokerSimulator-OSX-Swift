@@ -7,8 +7,8 @@
 //
 
 class FlushExaminer: HandExaminer {
-    override func isHandValid(hand: Hand) -> Bool {
-        return false
+    override func isRankValid(hand: Hand) -> Bool {
+        return GameRules.isFlush(hand: hand)
     }
     
     override var examinedRank: Hand.Rank {

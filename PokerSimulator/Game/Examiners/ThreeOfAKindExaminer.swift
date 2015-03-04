@@ -7,8 +7,8 @@
 //
 
 class ThreeOfAKindExaminer: HandExaminer {
-    override func isHandValid(hand: Hand) -> Bool {
-        return false
+    override func isRankValid(hand: Hand) -> Bool {
+        return GameRules.numberOfFormationsInHand(hand, containingNumberOfCards: 3) == 1
     }
     
     override var examinedRank: Hand.Rank {

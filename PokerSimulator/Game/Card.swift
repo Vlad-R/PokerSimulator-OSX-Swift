@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Vlad-R. All rights reserved.
 //
 
-class Card: Printable {
+class Card: Comparable, Printable {
     enum Suit: String {
         case Clubs = "\u{2663}"
         case Diamonds = "\u{2666}"
@@ -38,8 +38,41 @@ class Card: Printable {
         }
     }
     
-    private let suit: Suit
-    private let rank: Rank
+    let suit: Suit
+    let rank: Rank
+    
+    var value: UInt {
+        switch self.rank {
+        case .Two:
+            return 2
+        case .Three:
+            return 3
+        case .Four:
+            return 4
+        case .Five:
+            return 5
+        case .Six:
+            return 6
+        case .Seven:
+            return 7
+        case .Eight:
+            return 8
+        case .Nine:
+            return 9
+        case .Ten:
+            return 10
+        case .Jack:
+            return 11
+        case .Queen:
+            return 12
+        case .King:
+            return 13
+        case .Ace:
+            return 14
+        default:
+            return 0
+        }
+    }
     
     init(suit: Suit, rank: Rank) {
         self.suit = suit
@@ -50,4 +83,16 @@ class Card: Printable {
     var description: String {
         return "\(self.suit.rawValue)\(self.rank.rawValue)"
     }
+}
+
+// MARK: - Operators:
+
+// MARK: Equatable Protocol
+func ==(lhs: Card, rhs: Card) -> Bool {
+    return lhs.value == rhs.value
+}
+
+// MARK: Comparable Protocol
+func <(lhs: Card, rhs: Card) -> Bool {
+    return lhs.value < rhs.value
 }

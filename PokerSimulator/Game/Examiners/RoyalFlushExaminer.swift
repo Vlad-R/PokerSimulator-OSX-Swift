@@ -7,8 +7,8 @@
 //
 
 class RoyalFlushExaminer: HandExaminer {
-    override func isHandValid(hand: Hand) -> Bool {
-        return false
+    override func isRankValid(hand: Hand) -> Bool {
+        return GameRules.isStraight(hand: hand) && GameRules.isFlush(hand: hand) && (GameRules.highCardInHand(hand)!.rank == Card.Rank.Ace)
     }
     
     override var examinedRank: Hand.Rank {

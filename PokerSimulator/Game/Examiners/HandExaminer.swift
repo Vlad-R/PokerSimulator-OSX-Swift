@@ -22,7 +22,7 @@ class HandExaminer: Examiner {
     
     func examine(obj: AnyObject) {
         if let hand = obj as? Hand {
-            if self.isHandValid(hand) {
+            if self.isRankValid(hand) {
                 hand.rank = self.examinedRank
             } else {
                 self.nextExaminer?.examine(obj)
@@ -31,7 +31,7 @@ class HandExaminer: Examiner {
     }
     
     // MARK: - Methods to Override
-    func isHandValid(hand: Hand) -> Bool {
+    func isRankValid(hand: Hand) -> Bool {
         assert(false, "No Implementation")
         return true
     }

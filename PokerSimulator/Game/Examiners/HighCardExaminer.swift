@@ -7,8 +7,8 @@
 //
 
 class HighCardExaminer: HandExaminer {
-    override func isHandValid(hand: Hand) -> Bool {
-        return false
+    override func isRankValid(hand: Hand) -> Bool {
+        return true
     }
     
     override var examinedRank: Hand.Rank {

@@ -7,8 +7,8 @@
 //
 
 class OnePairExaminer: HandExaminer {
-    override func isHandValid(hand: Hand) -> Bool {
-        return false
+    override func isRankValid(hand: Hand) -> Bool {
+        return GameRules.numberOfFormationsInHand(hand, containingNumberOfCards: 2) == 1
     }
     
     override var examinedRank: Hand.Rank {
