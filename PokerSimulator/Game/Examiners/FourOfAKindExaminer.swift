@@ -7,5 +7,11 @@
 //
 
 class FourOfAKindExaminer: HandExaminer {
-
+    override func isHandValid(hand: Hand) -> Bool {
+        return false
+    }
+    
+    override var examinedRank: Hand.Rank {
+        return .FourOfAKind
+    }
 }

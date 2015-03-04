@@ -7,5 +7,11 @@
 //
 
 class FullHouseExaminer: HandExaminer {
-
+    override func isHandValid(hand: Hand) -> Bool {
+        return true
+    }
+    
+    override var examinedRank: Hand.Rank {
+        return .FullHouse
+    }
 }
