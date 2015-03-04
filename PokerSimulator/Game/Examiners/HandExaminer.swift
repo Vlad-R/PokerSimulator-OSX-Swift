@@ -9,15 +9,23 @@
 import Cocoa
 
 class HandExaminer: Examiner {
+    init(_ nextExaminer: Examiner?) {
+        self.nextExaminer = nextExaminer
+    }
+    
+    convenience init() {
+        self.init(nil)
+    }
+    
     // MARK: - Examiner Protocol
     var nextExaminer: Examiner?
     
-    func validate(obj: AnyObject) {
+    func examine(obj: AnyObject) {
         if let hand = obj as? Hand {
             if self.isHandValid(hand) {
                 hand.rank = self.examinedRank
             } else {
-                self.nextExaminer?.validate(obj)
+                self.nextExaminer?.examine(obj)
             }
         }
     }

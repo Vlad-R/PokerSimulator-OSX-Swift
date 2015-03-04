@@ -11,5 +11,5 @@ Base protocol that a link from the Chain of Responsability must implement.
 */
 protocol Examiner {
     var nextExaminer: Examiner? {get set}
-    func validate(obj: AnyObject)
+    func examine(obj: AnyObject)
 }

@@ -6,35 +6,58 @@
 //  Copyright (c) 2015 Vlad-R. All rights reserved.
 //
 
-class Dealer: Printable {
-    private var deck = Deck()
+class Dealer {
+    private var deck: Deck?
     private var hands = [Hand]()
+    private let examinerChain: HandExaminer!
     
     init() {
-        self.deck.shuffle()
+        self.examinerChain = self.createExaminerChain()
     }
     
-    func openNewRound() {
+    func startNewRound() {
         self.deck = Deck()
-        self.deck.shuffle()
+        self.deck?.shuffle()
         
         self.hands.removeAll(keepCapacity: true)
     }
     
     func dealNumberOfHands(handCount: UInt, withNumberOfCards cardCount:UInt) {
-        for i in 0..<handCount {
-            let cards = self.deck.draw(count: cardCount)
-            let hand = Hand(cards: cards)
-            self.hands += [hand]
+        if let deck = self.deck {
+            for i in 0..<handCount {
+                let cards = deck.draw(count: cardCount)
+                let hand = Hand(cards: cards)
+                self.hands += [hand]
+            }
+            self.deck = nil
         }
     }
     
-    // MARK: - Printable Protocol
-    var description: String {
+    func examineHands() {
+        for hand in self.hands {
+            self.examinerChain.examine(hand)
+        }
+    }
+    
+    var handsInfo: String {
         var result = ""
         for hand in self.hands {
             result += "\(hand)\n"
         }
         return result
+    }
+    
+    // MARK: - Private
+    private func createExaminerChain() -> HandExaminer {
+        return RoyalFlushExaminer(
+            StraightFlushExaminer(
+                FourOfAKindExaminer(
+                    FullHouseExaminer(
+                        FlushExaminer(
+                            StraightExaminer(
+                                ThreeOfAKindExaminer(
+                                    TwoPairExaminer(
+                                        OnePairExaminer(
+                                            HighCardExaminer())))))))))
     }
 }
