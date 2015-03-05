@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 Vlad-R. All rights reserved.
 //
 
+/// The class that coordinates the Game logic.
 class Dealer {
     private var deck: Deck?
     private var hands = [Hand]()
@@ -22,10 +23,10 @@ class Dealer {
         self.hands.removeAll(keepCapacity: true)
     }
     
-    func dealNumberOfHands(handCount: UInt, withNumberOfCards cardCount:UInt) {
+    func dealNumberOfHands(handCount: UInt) {
         if let deck = self.deck {
             for i in 0..<handCount {
-                let cards = deck.draw(count: cardCount)
+                let cards = deck.draw(count: 5)
                 let hand = Hand(cards: cards)
                 self.hands += [hand]
             }

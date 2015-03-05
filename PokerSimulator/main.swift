@@ -8,7 +8,7 @@
 
 let dealer = Dealer()
 dealer.startNewRound()
-dealer.dealNumberOfHands(5, withNumberOfCards: 5)
+dealer.dealNumberOfHands(5)
 dealer.examineHands()
 
 println(dealer.handsInfo)
